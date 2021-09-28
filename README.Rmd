@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of stRawberry is to store the analyzes referring to strawberry experiments. 
+The goal of stRawberry is to store the analyzes referring to strawberry experiments. The data were collected by Filipe Oliveira Mendes.
 
 ## Installation
 

@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 The goal of stRawberry is to store the analyzes referring to strawberry
-experiments.
+experiments. The data were collected by Filipe Oliveira Mendes.
 
 ## Installation
 
