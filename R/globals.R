@@ -1,3 +1,3 @@
 utils::globalVariables(c(
-  "da_sb"
+  "da_sb", ".data", "brix", "frutos"
 ))
