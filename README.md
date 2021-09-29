@@ -4,6 +4,8 @@
 # stRawberry <a href='https://github.com/brunomontezano/stRawberry/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/brunomontezano/stRawberry/workflows/R-CMD-check/badge.svg)](https://github.com/brunomontezano/stRawberry/actions)
 <!-- badges: end -->
 
 The goal of stRawberry is to store the analyzes referring to strawberry
