@@ -1,0 +1,43 @@
+---
+title: "Comparing brix degrees and number of fruits between cultivars"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Import
+
+```{r setup}
+library(stRawberry)
+```
+
+# Is there any difference in brix degrees and number of fruits between Albion, San Andreas and Portola?
+
+```{r}
+# Create a list containing all experiments and other list with measures
+experiments <- c("Solo", "Deitado", "Dupla", "Em pé")
+measure <- c("brix", "frutos")
+
+# Cross all possibilities
+crossed <- tidyr::crossing(
+  experiments,
+  measure
+)
+
+purrr::map2(
+  crossed$measure,
+  crossed$experiments,
+  ~ diffAnalysis(var = .x, experiment = .y)
+) %>% purrr::set_names(
+  paste0(
+    crossed$measure, " no experimento ", crossed$experiments)
+) %>% 
+  purrr::map(~ .x[[2]])
+```
+
+As we can observe in the Tukey test output, there are significant differences in the brix degrees and number of fruits only in the "Solo" experiment. 
+
