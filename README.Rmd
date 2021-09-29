@@ -29,3 +29,8 @@ The current version of stRawberry can be installed with:
 # install.packages("remotes")
 remotes::install_github("brunomontezano/stRawberry")
 ```
+
+## Website
+
+The website version of this package can be acessed through
+[GitHub Pages](https://brunomontezano.github.io/stRawberry/).

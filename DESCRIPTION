@@ -1,13 +1,13 @@
 Package: stRawberry
-Title: What the Package Does (One Line, Title Case)
+Title: stRawberry: Yield, Brix Degrees and Number of Fruits
 Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Bruno",
+           family = "Braga Montezano",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "brunodoyt@gmail.com",
+           comment = c(ORCID = "0000-0002-4627-1776"))
+Description: It maintains analyzes referring to yield, brix degrees and number of fruits in a strawberry study.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
