@@ -1,0 +1,64 @@
+---
+title: "Yield comparison through cultivars"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Import
+
+The first thing that should be done for the analysis is the package loading:
+
+```{r setup}
+library(stRawberry)
+```
+
+# Exploring using data visualization
+
+In order to compare the yield of the cultivars, we should first create
+some visualizations to explore the data a little bit better:
+
+```{r}
+diffPlot(
+  var = prod,
+  strata = cultivar,
+  facet  = exp
+  )
+```
+
+As we can see in the plot above, the Albion yield was visually
+higher compared to the other two cultivars in the "Solo" experiment.
+In the other experiments, this difference is much softer.
+
+Now we can make use of the view via table. Using the `diffTable` function, we can check a summary of the characteristics of each experiment:
+
+```{r}
+# Create a list containing all experiments
+experiments <- c("Solo", "Deitado", "Dupla", "Em pé")
+
+# Run the table function for every experiment
+purrr::map(
+  experiments,
+  diffTable
+  ) %>% 
+  purrr::set_names(experiments)
+```
+
+Thus, we verify that, in fact, the greatest difference in yield is shown within the "Solo" experiment.
+
+# Modeling
+
+After the previous visualization, we might want to verify the difference significance between Albion and the other cultivars in the "Solo" experiment. 
+
+```{r}
+diffAnalysis(
+  var = "prod",
+  experiment = "Solo"
+  )
+```
+
+As can be seen from the output of the function, the cultivars, within the "Solo" experiment, all differ from each other in terms of yield.
